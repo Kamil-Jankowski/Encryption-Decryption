@@ -1,6 +1,6 @@
 # Encryption-Decryption
 
-**Step 3:**
+**Step 3 (ongoing):**
 
 _In this stage, you need to support decryption in your program. The decryption is simply the inverse of encryption, following the same steps but reversing the order in which the keys are applied._
 
