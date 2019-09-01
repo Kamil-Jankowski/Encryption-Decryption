@@ -1,6 +1,0 @@
-<application>
-  <component name="CodeInsightSettings">
-    <EXCLUDED_PACKAGE NAME="com.sun.tools.javac.code.Type.contains" />
-    <EXCLUDED_PACKAGE NAME="org.hamcrest.CoreMatchers" />
-  </component>
-</application>
