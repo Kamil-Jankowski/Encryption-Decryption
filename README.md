@@ -1,6 +1,15 @@
 # Encryption-Decryption
 
-**Step 3 (ongoing):**
+**Step 4 (ongoing):**
+
+_Modify the previous program to work with command-line arguments instead of the standard input. The program must parse three arguments: **-mode**, **-key** and **-data**. The first argument should determine the program’s mode (**enc** - encryption, **dec** - decryption). The second argument is an integer key to modify the message, and the third argument is a text or ciphertext within quotes to encrypt or decrypt._
+
+_If the **-mode** argument is not specified, the default mode should be encryption. If the **-data** argument is not specified, the program must wait for it and the **-key** argument from the standard input._
+
+_Keep in mind that arguments may be in different order. For example, **-mode enc** may be at the end, at the end or in the middle of aguments array._
+
+***
+**Step 3:**
 
 _In this stage, you need to support decryption in your program. The decryption is simply the inverse of encryption, following the same steps but reversing the order in which the keys are applied._
 
