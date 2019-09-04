@@ -3,25 +3,51 @@ package encryptdecrypt;
 import java.util.*;
 
 public class Main {
-    private static Locale localePL = new Locale.Builder().setLanguage("pl").setRegion("PL").build();
+    private final static int unicodeMin = 32;
+    private final static int unicodeMax = Character.MAX_VALUE;
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        char[] text = scanner.nextLine().toLowerCase(localePL).toCharArray();
+        String method = scanner.nextLine();
+        String text = scanner.nextLine();
         int key = scanner.nextInt();
-        List<Character> alphabet = Arrays.asList('a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z');
-        String cyphertext = "";
+        String output;
+
+        if (method.equals("enc")){
+            output = encrypt(text, key);
+        } else if (method.equals("dec")){
+            output = decrypt(text, key);
+        } else {
+            output = "Wrong input. Program will now terminate.";
+        }
+        System.out.println(output);
+    }
+
+    private static String encrypt(String m, int k){
+        char[] text = m.toCharArray();
+        char[] cyphertext = new char[text.length];
 
         for (int i = 0; i < text.length; i++){
-            if (alphabet.contains(text[i])){
-                if (alphabet.indexOf(text[i]) < alphabet.size() - key){
-                    cyphertext += alphabet.get(alphabet.indexOf(text[i]) + key);
-                } else {
-                    cyphertext += alphabet.get(alphabet.indexOf(text[i]) + key - alphabet.size());
-                }
+            if (text[i] < unicodeMax - k){
+                cyphertext[i] = (char) (text[i] + k);
             } else {
-                cyphertext += text[i];
+                cyphertext[i] = (char) (text[i] + k + unicodeMin - unicodeMax);
             }
         }
-        System.out.println(cyphertext);
+        return String.valueOf(cyphertext);
+    }
+
+    private static String decrypt(String m, int k){
+        char[] text = m.toCharArray();
+        char[] message = new char[text.length];
+
+        for (int i = 0; i < text.length; i++){
+            if (text[i] >= unicodeMin + k){
+                message[i] = (char) (text[i] - k);
+            } else {
+                message[i] = (char) (text[i] - k - unicodeMin + unicodeMax);
+            }
+        }
+        return String.valueOf(message);
     }
 }
