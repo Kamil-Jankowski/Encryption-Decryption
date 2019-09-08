@@ -1,6 +1,15 @@
 # Encryption-Decryption
 
-**Step 4 (ongoing):**
+**Step 5 (ongoing):**
+
+_At this stage, you need to add the ability to read and write original and cipher data to files. The program must parse two additional arguments **-in** and **-out** to specify the full name of a file to read data and to write the result. Arguments **-mode**, **-key**, and **-data** should still work as before._
+
+_If the **-in** or **-data** argument is not specified, the program should wait for data from the standard input. If there is no **-out** argument, the program must print data to the standard output._
+
+_If there is a non-standard situation (an input file does not exist or an argument doesn’t have a value), the program should not fail. Instead, it must display a clear message about the problem and stop successfully._
+
+***
+**Step 4:**
 
 _Modify the previous program to work with command-line arguments instead of the standard input. The program must parse three arguments: **-mode**, **-key** and **-data**. The first argument should determine the program’s mode (**enc** - encryption, **dec** - decryption). The second argument is an integer key to modify the message, and the third argument is a text or ciphertext within quotes to encrypt or decrypt._
 
