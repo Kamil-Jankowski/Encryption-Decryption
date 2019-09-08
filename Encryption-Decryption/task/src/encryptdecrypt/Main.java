@@ -30,7 +30,7 @@ public class Main {
             System.out.println("-key: ");
             key = scanner.nextInt();
         }
-/* Above checker is correct according to provided task, however I think solution below is more usefull:
+/* Above checker is correct according to provided task, however I think solution below is more useful:
 
         // ---------- checking if all parameters are provided ----------
         if (data == null){
