@@ -1,6 +1,13 @@
 # Encryption-Decryption
 
-**Step 5 (ongoing):**
+**Step 6 (ongoing):**
+
+_Extend your program by adding different algorithms to encode/decode data. The first one would be shifting algorithm (it shifts each letter by the specified number according to its order in the alphabet in circle). The second one would be based on Unicode table, like in the previous stage._
+
+_When starting the program, the necessary algorithm should be specified by an argument (**-alg**). The first algorithm should be named **shift**, the second one should be named **unicode**._
+
+***
+**Step 5:**
 
 _At this stage, you need to add the ability to read and write original and cipher data to files. The program must parse two additional arguments **-in** and **-out** to specify the full name of a file to read data and to write the result. Arguments **-mode**, **-key**, and **-data** should still work as before._
 
