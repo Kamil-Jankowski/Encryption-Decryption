@@ -6,7 +6,7 @@ import java.io.*;
 
 public class Main {
     private static Scanner scanner = new Scanner(System.in, StandardCharsets.UTF_8);
-    private static String method = "enc";						// default method set to encryption
+    private static String method = "enc";				// default method set to encryption
     private static String data;
     private static int key;
     private static String inputPath;
@@ -30,7 +30,7 @@ public class Main {
                     inputPath = args[j];
                 } else if (args[i].equals("-out") && !args[j].startsWith("-")){
                     outputPath = args[j];
-                } else {										// incorrect parameter name provided
+                } else {						// incorrect parameter name provided
                     throw new IllegalArgumentException();
                 }
             }
