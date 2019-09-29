@@ -1,6 +1,6 @@
-# Encryption-Decryption
+# Encryption-Decryption - project finished
 
-**Step 6 (ongoing):**
+**Step 6:**
 
 _Extend your program by adding different algorithms to encode/decode data. The first one would be shifting algorithm (it shifts each letter by the specified number according to its order in the alphabet in circle). The second one would be based on Unicode table, like in the previous stage._
 
