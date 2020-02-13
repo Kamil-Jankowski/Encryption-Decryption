@@ -1,6 +1,7 @@
 <application>
-  <component name="DefaultFont">
-    <option name="FONT_SIZE" value="14" />
+  <component name="CodeInsightSettings">
+    <option name="USE_INSTANCEOF_ON_EQUALS_PARAMETER" value="true" />
+    <EXCLUDED_PACKAGE NAME="sun.jvm.hotspot.utilities.Assert" />
   </component>
   <component name="EditorSettings">
     <option name="USE_SOFT_WRAPS" value="CONSOLE" />
